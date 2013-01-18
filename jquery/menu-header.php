@@ -114,11 +114,6 @@ function menu_header_irc_jquery_org() {
 	);
 }
 
-// Temporary hack to make blogs work since they run outside of jquery-wp-content
-if ( !defined( 'JQUERY_LIVE_SITE' ) ) {
-	define( 'JQUERY_LIVE_SITE', $_SERVER['HTTP_HOST'] );
-}
-
 /*
  * Avert your eyes.
  */
