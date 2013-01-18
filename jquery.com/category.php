@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="content-right twelve columns listing">
+<div class="content-right twelve columns">
 	<div id="content">
 
 	<?php if ( have_posts() ) : ?>
