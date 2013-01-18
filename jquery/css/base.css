@@ -3566,3 +3566,5 @@ pre .chunk {
 .syntaxhighlighter table td.gutter {
 	border-right: 2px solid #999;
 }
+
+@import "blog.css";
