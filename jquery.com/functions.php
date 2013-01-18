@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'JQUERY_LIVE_SITE' ) ) {
+	define( 'JQUERY_LIVE_SITE', 'blog.jquery.com' );
+}
+
 // Add body classes found in postmeta.
 add_filter( 'body_class', function( $classes ) {
 	$classes = array( 'jquery' );
