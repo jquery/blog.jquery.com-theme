@@ -8,6 +8,8 @@
    HTML5 display definitions
    ========================================================================== */
 
+@import "blog.css";
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -3566,5 +3568,3 @@ pre .chunk {
 .syntaxhighlighter table td.gutter {
 	border-right: 2px solid #999;
 }
-
-@import "blog.css";
