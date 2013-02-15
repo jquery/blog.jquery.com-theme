@@ -8,14 +8,10 @@
 				<h3><span>Quick Access</span></h3>
 				<div class="cdn">
 					<strong>CDN</strong>
-					<input value="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js">
+					<input value="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
 				</div>
 				<div class="download">
-					<strong>Download jQuery 1.9.0:</strong>
-					<span>
-						<a href="http://code.jquery.com/jquery-1.9.0.min.js">Minified <em>(33KB)</em></a>
-						<a href="http://code.jquery.com/jquery-1.9.0.js">Unminified <em>(267KB)</em></a>
-					</span>
+					<strong><a href="http://jquery.com/download/">Download jQuery 1.9.1 →</a></strong>
 				</div>
 				<ul class="footer-icon-links">
 					<li><a class="icon-github" href="http://github.com/jquery/jquery">GitHub <small>jQuery <br>Source</small></a></li>
@@ -54,7 +50,7 @@
 
 		<div id="legal">
 			<ul class="footer-site-links">
-				<!-- <li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li> -->
+				<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
 				<li><a class="icon-group" href="http://forum.jquery.com/">Forum</a></li>
 				<li><a class="icon-wrench" href="http://api.jquery.com/">API</a></li>
 				<li><a class="icon-twitter" href="http://twitter.com/jquery">Twitter</a></li>

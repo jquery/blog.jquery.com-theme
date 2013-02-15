@@ -26,12 +26,12 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/base.css?v=1">
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<!--[if lt IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.css"><![endif]-->
+	<!--[if lt IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.min.css"><![endif]-->
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.2.6.2.min.js"></script>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.0.min.js"%3E%3C/script%3E'))</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
 	<script src="http://code.jquery.com/jquery-migrate-1.0.0.min.js"></script>
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
@@ -87,6 +87,7 @@
 					</li>
 					<li class="dropdown"><a href="#">Support</a>
 						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
 							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
 							<li><a href="http://forum.jquery.com/">Forums</a></li>
 							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
@@ -98,7 +99,8 @@
 							<li><a href="http://jquery.org/history/">History</a></li>
 							<li><a href="http://jquery.org/team/">Team</a></li>
 							<li><a href="http://jquery.org/sponsors/">Sponsors</a></li>
-							<li><a href="http://jquery.org/donate/" >Donate</a></li>
+							<li><a href="http://jquery.org/donate/">Donate</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
 						</ul>
 					</li>
 				</ul>

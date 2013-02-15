@@ -12,7 +12,7 @@
 				</div>
 				<div class="cdn">
 					<strong>CDN <em>JS</em></strong>
-					<input value="http://code.jquery.com/jquery-1.8.3.min.js">
+					<input value="http://code.jquery.com/jquery-1.9.0.min.js">
 				</div>
 				<div class="cdn">
 					<strong>CDN <em>JS</em></strong>
@@ -32,7 +32,7 @@
 
 		<div id="legal">
 			<ul class="footer-site-links">
-				<!-- <li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li> -->
+				<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
 				<li><a class="icon-group" href="http://forum.jquery.com/jquery-mobile">Forum</a></li>
 				<li><a class="icon-wrench" href="http://api.jquerymobile.com/">API</a></li>
 				<li><a class="icon-twitter" href="http://twitter.com/jquerymobile">Twitter</a></li>
