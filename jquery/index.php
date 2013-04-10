@@ -5,14 +5,14 @@
 
 get_header(); ?>
 
-<div class="content-right twelve columns">
+<div class="content-right twelve columns listing">
 	<div id="content">
 	<?php if ( have_posts() ) : ?>
 
 		<?php
 			while ( have_posts() ) : the_post();
 				get_template_part( 'content' );
-			endwhile; ?>
+			endwhile;
 		?>
 
 	<?php else : ?>

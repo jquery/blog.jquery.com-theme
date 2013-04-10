@@ -36,6 +36,7 @@ a,
 
 #banner-secondary .download-box h2 {
 	color: #71D1FF;
+	font-size: 26px;
 }
 
 #banner-secondary .download-box .button {
@@ -145,5 +146,13 @@ a,
 
 	#banner-secondary .download-box {
 		overflow: auto;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#content .dev-links {
+		width: 55%;
+		margin: -15px -29px .5em 1em;
+		overflow: hidden;
 	}
 }

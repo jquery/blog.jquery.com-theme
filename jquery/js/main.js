@@ -7,7 +7,7 @@ $(function() {
 		if ( typeof this.select === "function" ) {
 			this.select();
 		}
-	}); 
+	});
 });
 
 
@@ -91,17 +91,117 @@ $(function() {
 			gifts.not( gift ).slideUp();
 		});
 
+		// Coupon codes
+		var couponDiscount = 0;
+		$( "[name='coupon']" ).each(function() {
+
+			var input = $( this ),
+				payButtons = input.closest( "form" ).find( ".pay" );
+
+			// Hide input by default, replace with a link to show the input
+			input.hide();
+			$( "<a href='#'>" )
+				.text( "Have a coupon code?" )
+				.on( "click", function( event ) {
+					event.preventDefault();
+					$( this ).hide();
+					input.show().focus();
+				})
+				.insertAfter( input );
+
+			// TODO: loading indicator
+			// Verify the coupon code on blur
+			input.on( "blur", function() {
+				var couponId = input.val().toLowerCase();
+
+				// Disable pay buttons while we're verifying the coupon
+				payButtons.prop( "disabled", true );
+
+				// Verify the coupon
+				$.ajax({
+					url: StripeForm.url,
+					dataType: "json",
+					data: {
+						action: "stripe_coupon",
+						coupon: couponId
+					}
+				})
+				.done(function( coupon ) {
+
+					// Adjust payment buttons
+					payButtons.each(function() {
+						var amount,
+							button = $( this );
+
+						// Hide quarterly buttons
+						if ( button.text().match( /Quarterly/ ) ) {
+							button.hide();
+						}
+
+						// Adjust annual buttons
+						if ( button.text().match( /Annual/ ) ) {
+							amount = parseInt( button.data( "amount" ), 10 );
+							if ( coupon.percent_off ) {
+								couponDiscount = amount * (coupon.percent_off / 100);
+							} else if ( coupon.amount_off ) {
+								couponDiscount = coupon.amount_off;
+							}
+
+							// If the coupon is worth more than the membership,
+							// don't show a negative value for the payment button
+							couponDiscount = Math.min( amount, couponDiscount );
+							amount = (amount - couponDiscount) / 100;
+							button.text( "Annual: $" + amount );
+						}
+					});
+				})
+				.fail(function() {
+					couponDiscount = 0;
+
+					// TODO: notify user
+					// Show all payment buttons with standard values
+					payButtons.each(function() {
+						var button = $( this ).show();
+
+						if ( button.text().match( /Annual/ ) ) {
+							amount = parseInt( button.data( "amount" ), 10 ) / 100;
+							button.text( "Annual: $" + amount );
+						}
+					});
+				})
+				.always(function() {
+
+					// Re-enable the pay buttons
+					payButtons.prop( "disabled", false );
+				});
+			});
+		});
+
+		(function() {
+			var couponCode = location.search.match(/[?&]coupon=([^&]+)/);
+			if ( !couponCode ) {
+				return;
+			}
+
+			couponCode = couponCode[ 1 ];
+			$( "[name='coupon']" )
+				.val( couponCode )
+				// TODO: Move the relevant logic into a function we can call
+				.each(function() {
+					// Click the link to reveal the pre-filled coupon code
+					$( this ).next().triggerHandler( "click" );
+					// Tell the form to update based on the pre-filled coupon code
+					$( this ).triggerHandler( "blur" );
+				});
+		})();
+
 		function processMembership( data ) {
-			$.ajax({
+			return $.ajax({
 				url: StripeForm.url,
 				data: $.extend({
 					action: StripeForm.action,
 					nonce: StripeForm.nonce
 				}, data )
-			}).done(function() {
-				window.location = "/join/thanks/";
-			}).fail(function() {
-				// TODO
 			});
 		}
 
@@ -113,6 +213,8 @@ $(function() {
 				lastName = $.trim( form.find( "[name=last-name]" ).val() ),
 				email = $.trim( form.find( "[name=email]" ).val() ),
 				address = $.trim( form.find( "[name=address]" ).val() ),
+				coupon = $.trim( form.find( "[name=coupon]" ).val().toLowerCase() ),
+				amount = parseInt( button.data("amount"), 10 ) - couponDiscount,
 				gifts = form.find( "select" ),
 				errors = form.find( ".errors" ).empty().hide(),
 				valid = true;
@@ -149,8 +251,8 @@ $(function() {
 				image: button.data("image"),
 				name: button.data("name"),
 				description: button.data("description"),
-				panelLabel: button.data("panel-label"),
-				amount: button.data("amount"),
+				panelLabel: ( amount > 0 ? button.data("panel-label") : "Join" ),
+				amount: amount,
 				token: function( stripeData ) {
 					var data = {
 						token: stripeData.id,
@@ -158,12 +260,22 @@ $(function() {
 						firstName: firstName,
 						lastName: lastName,
 						email: email,
-						address: address
+						address: address,
+						coupon: coupon
 					};
 					gifts.each(function() {
 						data[ this.name ] = this.value;
 					});
-					processMembership( data );
+					processMembership( data )
+						.done(function() {
+							window.location = "/join/thanks/";
+						}).fail(function() {
+							showError(
+								"There was an error processing your payment. " +
+								"Please contact membership@jquery.org."
+							);
+							errors.slideDown();
+						});
 				}
 			});
 		});
@@ -231,7 +343,7 @@ $(function() {
 	var $siteMenu = $("#menu-top").tinyNav(),
 	$siteNav = $siteMenu.next();
 
-	// In order for Chosen to work as we'd like, 
+	// In order for Chosen to work as we'd like,
 	// we have to insert the placeholder attribute, an empty option, and select it before instantiation
 	$siteNav.attr("data-placeholder", "Navigate...").prepend("<option></option>").val("").chosen();
 

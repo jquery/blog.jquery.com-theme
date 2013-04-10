@@ -38,7 +38,7 @@ function menu_header_qunitjs_com() {
 		'http://qunitjs.com/intro/' => 'Intro to Unit Testing',
 		'http://api.qunitjs.com/' => 'API Documentation',
 		'http://qunitjs.com/cookbook/' => 'Cookbook',
-		'http://qunitjs.com/addons/' => 'Add-ons',
+		'http://qunitjs.com/plugins/' => 'Plugins',
 	);
 }
 
@@ -75,14 +75,15 @@ function menu_header_sizzlejs_com() {
 
 function menu_header_jquery_org() {
 	return array(
-		'http://jquery.org/' => 'Home',
-		'http://jquery.org/credit-card/' => 'Credit Card',
-		'http://jquery.org/donate/' => 'Donate',
-		'http://jquery.org/history/' => 'History',
-		'http://jquery.org/join/' => 'Join',
-		'http://jquery.org/members/' => 'Members',
-		'http://jquery.org/meeting/' => 'Meetings',
-		'http://jquery.org/team/' => 'Team',
+		'https://jquery.org/' => 'Home',
+		'https://jquery.org/join/' => 'Join',
+		'https://jquery.org/members/' => 'Members',
+		'https://jquery.org/sponsors/' => 'Sponsors',
+		'https://jquery.org/team/' => 'Team',
+		'https://jquery.org/meeting/' => 'Meetings',
+		'https://jquery.org/history/' => 'History',
+		'http://brand.jquery.org/' => 'Brand Guide',
+		'https://jquery.org/donate/' => 'Donate',
 	);
 }
 
@@ -110,7 +111,7 @@ function menu_header_contribute_jquery_org() {
 function menu_header_irc_jquery_org() {
 	return array(
 		'http://irc.jquery.org/irc-help' => 'IRC Help',
-		'http://jquery.org/meeting/' => 'Meetings',
+		'https://jquery.org/meeting/' => 'Meetings',
 	);
 }
 
@@ -144,7 +145,6 @@ function jquery_render_menu( $items ) {
 <?php
 	foreach ( $items as $url => $anchor ) {
 		$class = 'menu-item';
-		$url = set_url_scheme( $url );
 		if ( $anchor === 'Home' ) {
 			if ( $current === $url ) {
 				$class .= ' current';

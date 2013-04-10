@@ -164,7 +164,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.17em;
+	font-size: 1.25em;
 	margin: 0 0 0.67em;
 }
 
@@ -653,6 +653,31 @@ form input[type="submit"] {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+#content table {
+	margin: 1em 2em;
+}
+
+#content thead tr {
+	border-bottom: 2px solid #666;
+}
+
+#content tbody tr {
+	border-bottom: 1px solid #666;
+}
+
+#content tbody tr:hover {
+	background-color: #eee;
+}
+
+#content th {
+	font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+#content th,
+#content td {
+	padding: .5em;
 }
 
 /* ==========================================================================
@@ -2576,6 +2601,14 @@ footer p.copyright a.mt-link {
 	padding-left: 31px;
 }
 
+footer p.copyright a.wp-link {
+	background: url(../images/logo-wordpress.png) left 1px no-repeat;
+	padding-left: 19px;
+	padding-top: 1px;
+	display: inline-block;
+	height: 16px;
+}
+
 footer .footer-site-links li {
 	position: relative;
 	background: none;
@@ -2880,6 +2913,19 @@ footer li img {
 
 .signature:first-child h4 {
 	border-radius: 3px 3px 0 0;
+}
+
+#content .signature h4 a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.signature h4 .icon-link {
+	margin-right: 0.5em;
+}
+
+.signature .event-properties {
+	margin: 15px 0 0 0;
 }
 
 .argument {
@@ -3963,6 +4009,10 @@ pre .chunk {
 
 .syntaxhighlighter table td.gutter {
 	border-right: 2px solid #999;
+}
+
+#content .syntaxhighlighter tr {
+	border-bottom: none;
 }
 
 /* START Chosen.js CSS Stylings */

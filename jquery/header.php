@@ -32,7 +32,7 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
-	<script src="http://code.jquery.com/jquery-migrate-1.0.0.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-migrate-1.1.1.min.js"></script>
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
@@ -79,8 +79,6 @@
 					</li>
 					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
 						<ul>
-							<li><a href="http://events.jquery.org/2013/eu/">Europe</a></li>
-							<li><a href="http://jqueryto.com">Toronto</a></li>
 							<li><a href="http://events.jquery.org/2013/uk/">UK</a></li>
 							<li><a href="http://events.jquery.org/2013/portland/">Portland</a></li>
 						</ul>
@@ -94,14 +92,13 @@
 							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
 						</ul>
 					</li>
-					<li class="dropdown"><a href="http://jquery.org/">jQuery Foundation</a>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
 						<ul>
-							<li><a href="http://jquery.org/about/">About</a></li>
-							<li><a href="http://jquery.org/history/">History</a></li>
-							<li><a href="http://jquery.org/team/">Team</a></li>
-							<li><a href="http://jquery.org/sponsors/">Sponsors</a></li>
-							<li><a href="http://jquery.org/donate/">Donate</a></li>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
 							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
 						</ul>
 					</li>
 				</ul>
