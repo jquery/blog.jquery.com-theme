@@ -8,10 +8,10 @@
 				<h3><span>Quick Access</span></h3>
 				<div class="cdn">
 					<strong>CDN</strong>
-					<input value="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+					<input value="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 				</div>
 				<div class="download">
-					<strong><a href="http://jquery.com/download/">Download jQuery 1.9.1 →</a></strong>
+					<strong><a href="http://jquery.com/download/">Download jQuery 1.10.2 →</a></strong>
 				</div>
 				<ul class="footer-icon-links">
 					<li><a class="icon-github" href="http://github.com/jquery/jquery">GitHub <small>jQuery <br>Source</small></a></li>
@@ -38,9 +38,9 @@
 						</a>
 					</li>
 					<li>
-						<a href="http://jqueryenlightenment.com/">
-							<span><img src="<?php echo get_template_directory_uri(); ?>/content/books/jquery-enlightenment.jpg" alt="jQuery Enlightenment by Cody Lindley" width="92" height="114" /></span>
-							<strong>jQuery Enlightenment</strong><br />
+						<a href="http://www.syncfusion.com/resources/techportal/ebooks/jquery?utm_medium=BizDev-jQuery.org0513">
+							<span><img src="<?php echo get_template_directory_uri(); ?>/content/books/jquery-succinctly.jpg" alt="jQuery Succinctly by Cody Lindley" width="92" height="114" /></span>
+							<strong>jQuery Succinctly</strong><br />
 							<cite>Cody Lindley</cite>
 						</a>
 					</li>
@@ -58,7 +58,7 @@
 			</ul>
 			<p class="copyright">
 				Copyright <?php echo date('Y'); ?> <a href="https://jquery.org/team/">The jQuery Foundation</a>.<br>
-				<span class="sponsor-line"><a href="http://mediatemple.net" rel="noindex,nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+				<span class="sponsor-line"><a href="http://mediatemple.net" rel="noindex,nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com" rel="noindex,nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
 			</p>
 		</div>
 	</div>

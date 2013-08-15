@@ -78,18 +78,22 @@
 						</ul>
 					</li>
 					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
-						<ul>
-							<li><a href="http://events.jquery.org/2013/uk/">UK</a></li>
-							<li><a href="http://events.jquery.org/2013/portland/">Portland</a></li>
+						<ul class="wide">
+							<li><a href="http://events.jquery.org/2013/austin/#training">Sep 9 | jQuery Training Austin</a></li>
+							<li><a href="http://events.jquery.org/2013/austin/">Sep 10-11 | jQuery Conference Austin</a></li>
+							<li><a href="http://jquery.itmozg.ru/">Oct 15 | jQuery Russia 2013</a></li>
+							<li><a href="http://2013.cssdevconf.com/">Oct 21-22 | CSS Dev Conf</a></li>
+							<li><a href="http://javascriptsummit.com/">Nov 19-21 | JavaScript Summit</a></li>
 						</ul>
 					</li>
-					<li class="dropdown"><a href="#">Support</a>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
 						<ul>
 							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
 							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
 							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
 							<li><a href="http://forum.jquery.com/">Forums</a></li>
 							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
 						</ul>
 					</li>
 					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
@@ -111,8 +115,7 @@
 	<div id="logo-events" class="constrain clearfix">
 		<h2 class="logo"><a href="/" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
 
-		<!--Ads or events
-		<aside></aside> -->
+		<aside><?php jq_banner(); ?></aside>
 	</div>
 
 	<nav id="main" class="constrain clearfix">

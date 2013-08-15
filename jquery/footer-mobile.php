@@ -8,7 +8,7 @@
 				<h3><span>Quick Access</span></h3>
 				<div class="cdn">
 					<strong>CDN <em>CSS</em></strong>
-					<input value="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css">
+					<input value="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
 				</div>
 				<div class="cdn">
 					<strong>CDN <em>JS</em></strong>
@@ -16,11 +16,11 @@
 				</div>
 				<div class="cdn">
 					<strong>CDN <em>JS</em></strong>
-					<input value="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js">
+					<input value="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js">
 				</div>
 				<div class="download">
-					<strong>Download jQuery Mobile 1.3.0:</strong>
-					<span><a href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.zip">Zip File <em>(JavaScript, CSS, and images)</em></a></span>
+					<strong>Download jQuery Mobile 1.3.2:</strong>
+					<span><a href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.zip">Zip File <em>(JavaScript, CSS, and images)</em></a></span>
 				</div>
 				<ul class="footer-icon-links">
 					<li><a class="icon-github" href="http://github.com/jquery/jquery-mobile">GitHub <small>jQuery Mobile <br>Source</small></a></li>
@@ -40,7 +40,7 @@
 			</ul>
 			<p class="copyright">
 				Copyright <?php echo date('Y'); ?> <a href="https://jquery.org/team/">The jQuery Foundation</a>.<br>
-				<span class="sponsor-line"><a href="http://mediatemple.net" rel="noindex,nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+				<span class="sponsor-line"><a href="http://mediatemple.net" rel="noindex,nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com" rel="noindex,nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
 			</p>
 		</div>
 	</div>
