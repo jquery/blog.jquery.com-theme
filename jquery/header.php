@@ -79,11 +79,14 @@
 					</li>
 					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
 						<ul class="wide">
-							<li><a href="http://events.jquery.org/2013/austin/#training">Sep 9 | jQuery Training Austin</a></li>
-							<li><a href="http://events.jquery.org/2013/austin/">Sep 10-11 | jQuery Conference Austin</a></li>
-							<li><a href="http://jquery.itmozg.ru/">Oct 15 | jQuery Russia 2013</a></li>
+							<li><a href="http://www.deque.com/deque-partners-jquery-create-accessibility-summit">Oct 10-11 | jQuery Accessibility Summit</a></li>
+							<li><a href="http://jquery.itmozg.ru/">Oct 15 | jQuery Russia</a></li>
+							<li><a href="http://modernweb.com/training/jquery-oct-2013.php">Oct 15-17 | jQuery Virtual Training</a></li>
 							<li><a href="http://2013.cssdevconf.com/">Oct 21-22 | CSS Dev Conf</a></li>
 							<li><a href="http://javascriptsummit.com/">Nov 19-21 | JavaScript Summit</a></li>
+							<li><a href="http://events.jquery.org/2014/san-diego/">Feb 12-13 | jQuery San Diego</a></li>
+							<li><a href="http://www.gentics.com/jquery-europe">Feb 28-Mar 1 | jQuery Europe</a></li>
+							<li><a href="http://jqueryuk.com">May 16 | jQuery UK</a></li>
 						</ul>
 					</li>
 					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
@@ -113,7 +116,7 @@
 
 <div id="container">
 	<div id="logo-events" class="constrain clearfix">
-		<h2 class="logo"><a href="/" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
+		<h2 class="logo"><a href="<?php echo jq_logo_link(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
 
 		<aside><?php jq_banner(); ?></aside>
 	</div>

@@ -8,15 +8,15 @@
 				<h3><span>Quick Access</span></h3>
 				<div class="cdn">
 					<strong>CDN <em>CSS</em></strong>
-					<input value="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+					<input value="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" readonly>
 				</div>
 				<div class="cdn">
 					<strong>CDN <em>JS</em></strong>
-					<input value="http://code.jquery.com/jquery-1.9.1.js">
+					<input value="http://code.jquery.com/jquery-1.9.1.js" readonly>
 				</div>
 				<div class="cdn">
 					<strong>CDN <em>JS</em></strong>
-					<input value="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
+					<input value="http://code.jquery.com/ui/1.10.3/jquery-ui.js" readonly>
 				</div>
 				<div class="download">
 					<div><strong>Download jQuery UI 1.10.3 (for jQuery 1.6+):</strong></div>
@@ -47,6 +47,13 @@
 						<a href="http://link.packtpub.com/PG9pAC">
 							<span><img src="<?php echo get_template_directory_uri(); ?>/content/books/jquery-ui-themes.jpg" alt="jQuery UI Themes by Adam Boduch" width="92" height="114"></span>
 							<strong>jQuery UI Themes</strong><br>
+							<cite>Adam Boduch</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.packtpub.com/jquery-userinterface-cookbook/book">
+							<span><img src="<?php echo get_template_directory_uri(); ?>/content/books/jquery-ui-cookbook.jpg" alt="jQuery UI Cookbook by Adam Boduch" width="92" height="114"></span>
+							<strong>jQuery UI Cookbook</strong><br>
 							<cite>Adam Boduch</cite>
 						</a>
 					</li>
