@@ -500,7 +500,8 @@ textarea {
 	resize: vertical;
 }
 
-#content input[type=text],
+#content input[type="text"],
+#content input[type="email"],
 #content textarea {
 	color: #666;
 
@@ -540,7 +541,8 @@ textarea {
 }
 
 #content input:focus,
-#content input[type=text]:focus,
+#content input[type="text"]:focus,
+#content input[type="email"]:focus,
 #content textarea:focus {
 	outline: none;
 
@@ -608,7 +610,8 @@ form input[type="submit"] {
 
 .top-labels label,
 .top-labels .radio label,
-.top-labels input[type=text],
+.top-labels input[type="text"],
+.top-labels input[type="email"],
 .top-labels textarea {
 	display: block;
 }
@@ -644,6 +647,14 @@ form input[type="submit"] {
 	padding: 0 0 5px 0;
 
 	border: 0;
+}
+
+/**
+ * Label descriptions
+ */
+
+label .field-description {
+	font-size: 0.8em;
 }
 
 /* ==========================================================================
