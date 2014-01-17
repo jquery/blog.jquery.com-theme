@@ -238,10 +238,25 @@ pre {
  * Improves readability of pre-formatted text in all browsers.
  */
 
-pre {
+pre, code {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
+	word-spacing: 0;
+	font-size: 13px;
+	line-height: 16px;
+}
+code {
+	padding: 0 3px;
+	background-color: #eee;
+	border-radius: 3px;
+}
+pre code {
+	background-color: transparent;
+	font-size: 16px;
+	font-weight: bold;
+	white-space: pre;
+	word-wrap: normal;
 }
 
 /*
@@ -697,7 +712,6 @@ table {
 
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -1205,8 +1219,8 @@ ul.icons li [class*=" icon-"] {
 .icon-folder-open-alt:before      { content: "\f115"; }
 
 /* Manual Font Awesome Styles */
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]::before, [class^="icon-"]::after,
+[class*=" icon-"]::before, [class*=" icon-"]::after {
   font-family: FontAwesome, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -1890,23 +1904,6 @@ hr {
 	margin: .75em 0;
 }
 
-pre, code {
-	font: 13px/16px "source-code-pro", Consolas, monospace;
-	word-spacing: 0;
-}
-
-code {
-	padding: 0 3px;
-	background-color: #eee;
-	border-radius: 3px;
-	white-space: pre;
-}
-
-pre code {
-	background-color: transparent;
-	font-size: 16px;
-	font-weight: bold;
-}
 #content code a {
 	text-decoration: none;
 }
@@ -2796,18 +2793,18 @@ footer li img {
 	position: relative;
 }
 
-.toc-linked a {
+.toc-linked .toc-link {
 	position: absolute;
 	left: -1em;
 	text-decoration: none;
 	opacity: 0;
 }
 /* TODO: Remove (https://github.com/jquery/jquery-wp-content/issues/143) */
-#content .toc-linked a {
+#content .toc-linked .toc-link {
 	text-decoration: none;
 }
 
-.toc-linked:hover a {
+.toc-linked:hover .toc-link {
 	opacity: 1;
 }
 
@@ -3170,7 +3167,12 @@ footer li img {
 	}
 
 	#logo-events aside {
-		display: none;
+		display: inline-block;
+		position: relative;
+		left: 50%;
+		margin-left: -200px;
+		float: none;
+		padding: 10px 0;
 	}
 
 	#logo-events h2.logo {
@@ -3283,6 +3285,11 @@ footer li img {
 	
 	#global-nav { 
 		display: none;
+	}
+
+	#logo-events aside {
+		width: 300px;
+		margin-left: -150px;
 	}
 
 	#container {
