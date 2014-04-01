@@ -46,6 +46,7 @@
 	margin: 0 0 1.625em 73px;
 	padding: 1.625em;
 	position: relative;
+	word-wrap: break-word;
 }
 .commentlist .pingback {
 	margin: 0 0 1.625em;
@@ -206,6 +207,9 @@ a.comment-reply-link > span {
 #respond .comment-form-url,
 #respond .comment-form-comment {
 	position: relative;
+}
+#respond .comment-form-comment label {
+	display: block;
 }
 #respond textarea {
 	resize: vertical;
