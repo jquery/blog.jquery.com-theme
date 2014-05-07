@@ -1,4 +1,4 @@
-/*! Copyright 2013 jQuery Foundation and other contributors
+/*! Copyright 2014 jQuery Foundation and other contributors
  * Includes:
  * - normalize.css v1.0.1 | MIT License | git.io/normalize
  * - Font Awesome - http://fortawesome.github.com/Font-Awesome - CC BY 3.0
@@ -521,6 +521,7 @@ textarea {
 	color: #666;
 
 	width: 70%;
+	min-width: 300px;
 
 	margin: 5px 0 10px 0;
 	padding: 8px 12px;
@@ -2381,82 +2382,6 @@ footer strong {
 	text-decoration: none;
 }
 
-footer .cdn {
-	border-radius: 4px;
-	background: repeat-x center center #000;
-	width: 96%;
-	margin-left: 2%;
-	height: 30px;
-	line-height: 30px;
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-	-webkit-box-shadow: rgba(255,255,255,0.15) 0 1px 0;
-	box-shadow: rgba(255,255,255,0.15) 0 1px 0;
-}
-
-footer .cdn ~ .cdn { margin-top: 5px; }
-
-footer .cdn ~ .cdn strong { text-align: right; }
-
-footer .cdn strong {
-	text-align: center;
-	height: 26px;
-	text-align: left;
-	padding: 0 6px 0 6px;
-	line-height: 28px;
-	display: inline-block;
-	margin: 2px 0 0 2px;
-	position: relative;
-	border-radius: 3px 0 0 3px;
-	background: #777;
-	color: #fff;
-	text-shadow: #000 0 -1px 0;
-	font-weight: bold;
-	background-color: #7a7a7a;
-	background-image: -webkit-linear-gradient(#7a7a7a, #5e5e5e); /* Chrome 10+, Saf6 */
-	background-image: linear-gradient(top, #7a7a7a, #5e5e5e);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#7a7a7a', EndColorStr='#5e5e5e'); /* IE6–IE9 */
-	font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-}
-
-footer .cdn strong:after {
-	content: "";
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	border: solid 1px rgba(255,255,255,0.2);
-	border-radius: 3px 0 0 3px;
-}
-
-footer .cdn strong em {
-	font-style: normal;
-	color: #ccc;
-	font-family: "source-code-pro", Consolas, monospace;
-	display: inline-block;
-	width: 35px;
-	padding-left: 5px;
-	padding-right: 4px;
-	text-align: right;
-}
-
-footer .cdn input {
-	display: inline-block;
-	width: 100%;
-	background: transparent;
-	border: 0;
-	font-family: "source-code-pro", Consolas, monospace;
-	padding-left: 5px;
-	white-space: nowrap;
-	color: #ccc;
-	font-size: 12px;
-}
-
-footer .cdn input:focus { outline: none; }
-
 footer .download {
 	text-align: center;
 	color: #fff;
@@ -2476,14 +2401,6 @@ footer .download a em {
 }
 
 footer .download a:hover { border-bottom: solid 1px #888; }
-
-footer .footer-icon-links {
-	padding: 15px 0;
-	margin: 0 2%;
-	border-top: solid 1px #333;
-	-webkit-box-shadow: #000 0 -1px 0;
-	box-shadow: #000 0 -1px 0;
-}
 
 footer .footer-icon-links li {
 	width: 22%;
@@ -2574,7 +2491,7 @@ footer h3:after {
 .footer-site-links {
 	float: right;
 	padding: 10px 0 0 0;
-	width: 60%;
+	width: 58%;
 	text-align: right;
 }
 
@@ -2595,14 +2512,10 @@ footer p.copyright a:hover {
 	color: #fff;
 }
 
-footer p.copyright > br {
-	display: none;
-}
-
 footer p.copyright span.sponsor-line {
 	display: block;
 	font-size: 10px;
-	margin: 2px 0 0 0;
+	margin-top: 1em;
 }
 
 footer p.copyright a.mt-link {
@@ -2623,7 +2536,7 @@ footer p.copyright a.wp-link {
 	height: 16px;
 }
 
-footer .footer-site-links li {
+.footer-site-links li {
 	position: relative;
 	background: none;
 	width: auto;
@@ -2633,7 +2546,11 @@ footer .footer-site-links li {
 	font-size: 13px;
 }
 
-footer .footer-site-links li a {
+.footer-site-links li:first-child {
+	margin-left: 0;
+}
+
+.footer-site-links li a {
 	position: relative;
 	color: #aaa;
 	display: block;
@@ -2642,7 +2559,7 @@ footer .footer-site-links li a {
 	line-height: inherit;
 }
 
-footer .footer-site-links li a:before {
+.footer-site-links li a:before {
 	position: absolute;
 	font-size: 1.5em;
 	color: #4d4d4d;
@@ -2650,20 +2567,14 @@ footer .footer-site-links li a:before {
 	left: 2px;
 }
 
-footer .footer-site-links li:hover a,
-footer .footer-site-links li:hover a:before {
+.footer-site-links li:hover a,
+.footer-site-links li:hover a:before {
 	color: #e6e6e6;
 }
 
-.footer-site-links li { display: inline-block; }
-
-footer .col {
-	margin-left: 2.5%;
-	padding: 30px 0 20px 0;
-	height: 100%;
+.footer-site-links li {
+	display: inline-block;
 }
-
-footer .col:first-child { margin-left: 0 }
 
 footer ul li {
 	list-style: none;
@@ -2672,81 +2583,11 @@ footer ul li {
 	line-height: 30px;
 }
 
-footer .bottom { margin: 0 10% 0 0; }
-
 footer #legal {
-	clear: left;
-	display: block;
 	margin-top: 1em;
 	border-top: solid 1px #333;
 	-webkit-box-shadow: #000 0 -1px 0;
 	box-shadow: #000 0 -1px 0;
-}
-
-footer .presentations li {
-	float: left;
-	width: 45%;
-	min-width: 142px;
-	margin-left: 3.5%;
-	line-height: 130%;
-	font-size: 11px;
-}
-
-footer .presentations li a > span,
-footer .books         li a > span {
-	display: block;
-	border-radius: 5px;
-	border: solid 1px #000;
-	position: relative;
-	width: 142px;
-	height: 92px;
-	margin-bottom: 5px;
-	overflow: hidden;
-	background-clip: padding-box;
-}
-
-footer .presentations li a:hover > span,
-footer .books         li a:hover > span {
-	border-color: white;
-}
-
-footer .presentations li a > span:after,
-footer .books         li a > span:after {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border: solid 1px rgba(255,255,255,0.2);
-	border-radius: 4px;
-}
-
-footer .presentations li a > span img {
-	max-width: 100%;
-	height: auto;
-}
-
-footer .presentations li a > br,
-footer .books         li a > br { display: none; }
-
-footer .presentations li a cite,
-footer .books         li a cite {
-	font-style: normal;
-	display: block;
-	margin-top: 3px;
-	font-size: 9px;
-	color: #aaa;
-}
-
-footer .presentations li a cite,
-footer .presentations li a strong,
-footer .books         li a cite,
-footer .books         li a strong {
-	line-height: 130%;
-	display: block;
-	font-weight: normal;
 }
 
 footer .books li {
@@ -2757,21 +2598,32 @@ footer .books li {
 	margin-bottom: 15px;
 	line-height: 130%;
 	font-size: 11px;
+	text-align: center;
 }
 
-footer .books li:first-child { margin-left: 2%; }
+footer .books li:first-child {
+	margin-left: 2%;
+}
 
-footer .books li a > span {
-	width: 90px;
+footer .books li a img {
+	display: block;
+	border-radius: 5px;
+	border: solid 1px rgba(255,255,255,0.2);
+	width: 92px;
 	height: 114px;
+	margin: 0 auto 5px;
 }
 
-footer .books li a > span.top    { background-position: center top;}
-footer .books li a > span.bottom { background-position: center bottom;}
-footer .books li a > span        { background-position: center center;}
+footer .books li a:hover img {
+	border-color: #fff;
+}
 
-footer li img {
-	border-radius: 4px;
+footer .books li a cite {
+	display: block;
+	font-style: normal;
+	font-size: 9px;
+	line-height: 1.5em;
+	color: #aaa;
 }
 
 
@@ -3051,11 +2903,23 @@ footer li img {
 	margin: 0;
 }
 
-.warning {
+.warning, .note {
 	padding: 0.5em 1em;
 	margin: 1em;
-	background: #fff3a5;
 	border-radius: 5px;
+}
+
+.warning {
+	background: #fff3a5;
+}
+
+.note {
+	background: #428bca;
+	color: #fff;
+}
+
+.note a {
+	color: #fff;
 }
 
 /* Media Queries
@@ -3108,10 +2972,7 @@ footer li img {
 		padding-right: 2%;
 	}
 
-	#content,
-	.col7-3.col,
-	footer #legal p.copyright,
-	footer #legal ul.footer-site-links {
+	#content {
 		width: 100%;
 		float: none;
 		clear: both;
@@ -3122,28 +2983,11 @@ footer li img {
 		margin-right: -15px;
 	}
 
-	footer #legal ul.footer-site-links {
-		display: inline;
-		text-align: center !important;
-		text-transform: none;
-		float: left;
+	footer p.copyright,
+	footer ul.footer-site-links {
 		width: 100%;
-	}
-
-	footer #legal ul.footer-site-links li:first-child {
-		margin-left: 0;
-	}
-
-	footer #legal p.copyright {
 		text-align: center;
-		margin-bottom: 10px;
-	}
-
-	.col7-2.col {
-		margin: 0;
-		width: 100%;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		margin: 0 0 10px 0;
 	}
 }
 
@@ -3262,7 +3106,6 @@ footer li img {
 		padding: 0;
 	}
 
-	footer .presentations li,
 	footer .books li {
 		clear: both;
 		margin-bottom: 10px;
@@ -3272,7 +3115,6 @@ footer li img {
 		text-align: center;
 	}
 
-	footer .presentations li span,
 	footer .books li span {
 		display: block;
 		margin-left: auto;
@@ -3367,8 +3209,8 @@ footer li img {
 	#banner-secondary {
 		margin-left: -25px;
 		margin-right: -25px;
-
 	}
+
 	footer .footer-icon-links li a:before {
 		display: none;
 	}
@@ -3376,7 +3218,7 @@ footer li img {
 	footer .footer-icon-links li:first-child {
 		margin-left: 0;
 	}
-	
+
 	footer .download > span {
 		white-space: normal;
 	}

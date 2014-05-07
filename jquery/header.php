@@ -32,7 +32,6 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-migrate-1.1.1.min.js"></script>
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
@@ -79,9 +78,11 @@
 					</li>
 					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
 						<ul class="wide">
-							<li><a href="http://events.jquery.org/2014/san-diego/">Feb 12-13 | jQuery San Diego</a></li>
-							<li><a href="http://www.gentics.com/jquery-europe">Feb 28-Mar 1 | jQuery Europe</a></li>
-							<li><a href="http://jqueryuk.com">May 16 | jQuery UK</a></li>
+							<li><a href="http://appendto.com/what-we-do/training/schedule/jquery-virtual-training-april-2014/">Apr 16-17 | jQuery Virtual Training</a></li>
+							<li><a href="http://jqueryuk.com/?utm_source=jqueryorg&utm_medium=banner&utm_campaign=jqueryorgbanner">May 16 | jQuery UK</a></li>
+							<li><a href="http://appendto.com/what-we-do/training/schedule/jquery-virtual-training-june-2014/">Jun 17-19 | jQuery Virtual Training</a></li>
+							<li><a href="http://events.jquery.org/2014/chicago/">Sep 12-13 | jQuery Chicago</a></li>
+							<li><a href="http://2014.cssdevconf.com/">Oct 13-15 | CSS Dev Conf 2014</a></li>
 						</ul>
 					</li>
 					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
