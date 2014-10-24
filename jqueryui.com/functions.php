@@ -3,6 +3,9 @@
 if ( !defined( 'JQUERY_LIVE_SITE' ) ) {
 	define( 'JQUERY_LIVE_SITE', 'blog.jqueryui.com' );
 }
+if ( !defined( 'JQUERY_LIVE_DOMAIN' ) ) {
+	define( 'JQUERY_LIVE_DOMAIN', 'blog.jqueryui.com' );
+}
 
 // Add body classes found in postmeta.
 add_filter( 'body_class', function( $classes ) {
