@@ -1,11 +1,8 @@
 <!doctype html>
-<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" <?php language_attributes(); ?>> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<html class="no-js" <?php language_attributes(); ?>>
 <head data-live-domain="<?php echo JQUERY_LIVE_DOMAIN; ?>">
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title><?php
 		global $page, $paged;
@@ -26,12 +23,10 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/base.css?v=1">
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<!--[if lt IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.min.css"><![endif]-->
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.2.6.2.min.js"></script>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
@@ -48,10 +43,6 @@
 
 </head>
 <body <?php body_class(); ?>>
-
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-<![endif]-->
 
 <header>
 	<section id="global-nav">
@@ -114,7 +105,9 @@
 	<div id="logo-events" class="constrain clearfix">
 		<h2 class="logo"><a href="<?php echo jq_logo_link(); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
 
-		<aside><?php jq_banner(); ?></aside>
+		<aside>
+			<div id="broadcast"></div>
+		</aside>
 	</div>
 
 	<nav id="main" class="constrain clearfix">
