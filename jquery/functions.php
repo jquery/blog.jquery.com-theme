@@ -281,3 +281,35 @@ function twentyeleven_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
+
+/**
+ * Content Security Policy
+ */
+function twentyeleven_content_security_policy() {
+	$report_url = 'https://csp-report-api.openjs-foundation.workers.dev/';
+	$policy = array(
+		'default-src' => "'self'",
+		'script-src' => "'self' code.jquery.com",
+		'style-src' => "'self' code.jquery.com",
+		'img-src' => "'self' code.jquery.com",
+		'object-src' => "'none'",
+		'frame-ancestors' => "'none'",
+		'block-all-mixed-content' => '',
+		'report-to' => 'csp-endpoint',
+		// Add report-uri for Firefox, which
+		// does not yet support report-to
+		'report-uri' => $report_url,
+	);
+
+	$policy = apply_filters( 'twentyeleven_content_security_policy', $policy );
+
+	$policy_string = '';
+	foreach ( $policy as $key => $value ) {
+		$policy_string .= $key . ' ' . $value . '; ';
+	}
+
+	header( 'Reporting-Endpoints: csp-endpoint="' . $report_url . '"' );
+	header( 'Content-Security-Policy-Report-Only: ' . $policy_string );
+}
+
+add_action( 'send_headers', 'twentyeleven_content_security_policy' );
