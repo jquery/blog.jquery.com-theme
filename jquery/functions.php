@@ -289,9 +289,14 @@ function twentyeleven_content_security_policy() {
 	$report_url = 'https://csp-report-api.openjs-foundation.workers.dev/';
 	$policy = array(
 		'default-src' => "'self'",
-		'script-src' => "'self' code.jquery.com",
-		'style-src' => "'self' code.jquery.com",
+		// Allow scripts and inline scripts for typekit
+		'script-src' => "'self' 'unsafe-inline' code.jquery.com use.typekit.net",
+		// Allow inline styles for typekit
+		'style-src' => "'self' 'unsafe-inline' code.jquery.com",
+		// Leaving out typekit img-src, which only loads the p.gif for analytics
 		'img-src' => "'self' code.jquery.com",
+		// Allow fonts from typekit
+		'font-src' => "'self' use.typekit.net",
 		'object-src' => "'none'",
 		'frame-ancestors' => "'none'",
 		'block-all-mixed-content' => '',
