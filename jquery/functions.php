@@ -293,8 +293,10 @@ function twentyeleven_content_security_policy() {
 		'script-src' => "'self' 'unsafe-inline' code.jquery.com use.typekit.net",
 		// Allow inline styles for typekit
 		'style-src' => "'self' 'unsafe-inline' code.jquery.com",
+		// Allow images from about:blank, *.cloudfront.net, events.jquery.org, and openjsf.org
+		// Allow images from *.twimg.com, gruntjs.com and *.imgur.com
 		// Leaving out typekit img-src, which only loads the p.gif for analytics
-		'img-src' => "'self' code.jquery.com",
+		'img-src' => "'self' about: *.cloudfront.net events.jquery.org openjsf.org *.twimg.com gruntjs.com *.imgur.com code.jquery.com",
 		// Allow fonts from typekit
 		'font-src' => "'self' use.typekit.net",
 		'object-src' => "'none'",
