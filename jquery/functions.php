@@ -314,7 +314,7 @@ function twentyeleven_content_security_policy() {
 	}
 
 	header( 'Reporting-Endpoints: csp-endpoint="' . $report_url . '"' );
-	header( 'Content-Security-Policy-Report-Only: ' . $policy_string );
+	header( 'Content-Security-Policy: ' . $policy_string );
 }
 
 add_action( 'send_headers', 'twentyeleven_content_security_policy' );
