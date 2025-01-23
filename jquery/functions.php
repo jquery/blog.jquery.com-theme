@@ -294,9 +294,11 @@ function twentyeleven_content_security_policy() {
 		// Allow inline styles for typekit
 		'style-src' => "'self' 'unsafe-inline' code.jquery.com",
 		// Leaving out typekit img-src, which only loads the p.gif for analytics
-		'img-src' => "'self' code.jquery.com",
+		// Allow data: images and gravatars for the wordpress admin
+		'img-src' => "'self' data: secure.gravatar.com code.jquery.com",
 		// Allow fonts from typekit
-		'font-src' => "'self' use.typekit.net",
+		// Allow data: fonts for the wordpress admin
+		'font-src' => "'self' data: use.typekit.net",
 		'object-src' => "'none'",
 		'frame-ancestors' => "'none'",
 		'block-all-mixed-content' => '',
